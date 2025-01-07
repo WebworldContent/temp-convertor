@@ -7,14 +7,14 @@ function App() {
 
   const handleCelcius = (event) => {
     const {value} = event.target;
-    const fern = parseInt((((parseInt(value) + 32) * 9) / 5).toString(), 10)
+    const fern = parseInt(((parseInt(value) * (9/5)) + 32).toString(), 10);
     setCel(value);
     setFen(fern);
   }
 
   const handleFarenhiet = (event) => {
     const {value} = event.target;
-    const celc = parseInt((((parseInt(value) - 32) * 5) / 9).toString(), 10)
+    const celc = parseInt(((parseInt(value) - 32) * 5/9).toString(), 10);
     setFen(value);
     setCel(celc);
   }
